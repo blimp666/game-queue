@@ -25,6 +25,7 @@ Gem::Specification.new do |s|
     "README.rdoc",
     "Rakefile",
     "VERSION",
+    "game-queue.gemspec",
     "lib/game-queue.rb",
     "spec/game-queue_spec.rb",
     "spec/spec_helper.rb"
