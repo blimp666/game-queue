@@ -38,4 +38,10 @@ class GameQueue
     eval(result) if result
   end
 
+  # ==== Description
+  # очищает всю очередь
+  def clean!
+    $redis.del(queue_name)
+  end
+
 end
