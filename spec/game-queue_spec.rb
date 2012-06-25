@@ -19,7 +19,7 @@ describe "GameQueue" do
   context "after push" do
 
     before(:each) do
-      @data  = {"cool" => "data", "something" => "else"}
+      @data  = {"cool" => "data", "something" => "else", "started_at" => Time.now}
       GameQueue.push(:event, @data)
     end
 
