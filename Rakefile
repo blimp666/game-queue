@@ -17,8 +17,8 @@ Jeweler::Tasks.new do |gem|
   gem.name = "game-queue"
   gem.homepage = "http://github.com/NONE/game-queue"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = %Q{Game queue}
+  gem.description = %Q{Simple game queue for redis}
   gem.email = "nobody@nowhere.com"
   gem.authors = ["V_M"]
   # dependencies defined in Gemfile
