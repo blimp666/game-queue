@@ -22,7 +22,7 @@ class GameQueue
   # message_name<String>: тип сообщения
   # message_body<Object>:: любой ruby объект с простыми данными, хэш, массив, число, строка...
   def push(message_name, message_body)
-    $redis.lpush(queue_name, Marshal.dump([message_name.to_s, message_body]))
+    redis.lpush(queue_name, Marshal.dump([message_name.to_s, message_body]))
   end
 
   # См. push
@@ -34,14 +34,14 @@ class GameQueue
   # ==== Returns
   # <Array[String, Object]>::
   def pop
-    result = $redis.rpop(queue_name)
+    result = redis.rpop(queue_name)
     Marshal.load(result) if result
   end
 
   # ==== Description
   # очищает всю очередь
   def clean!
-    $redis.del(queue_name)
+    redis.del(queue_name)
   end
 
 end
